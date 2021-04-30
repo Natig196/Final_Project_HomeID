@@ -1,0 +1,387 @@
+@import "../common/variables";
+@import "../common/mixins";
+@import "../common/commons";
+
+main {
+  #intro {
+    background-image: url(../../images/bg-pic.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .advanced-searchbar-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+
+      .advanced-searchbar {
+        background-color: $searchbar-color;
+        position: absolute;
+        top: -50px;
+        z-index: 7;
+        width: 80%;
+        height: 100px;
+        border-radius: 5px;
+        padding: 20px 30px;
+
+        form {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .keyword {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin-right: 15px;
+            position: relative;
+            .key {
+              color: rgb(170, 170, 170);
+              font-weight: 600;
+            }
+            input[type="search"] {
+              height: 42px;
+              border-top: none;
+              border-left: none;
+              border-right: none;
+              border-bottom: 1px solid rgb(78, 78, 78);
+              background-color: $searchbar-color;
+              &::placeholder {
+                font-weight: 700;
+                font-size: 15px;
+              }
+            }
+            .fa-search {
+              position: absolute;
+              right: 0;
+              top: 45%;
+              color: $link-color;
+              font-size: 20px;
+            }
+          }
+          .status {
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+            margin-right: 15px;
+
+            .stat {
+              color: rgb(170, 170, 170);
+              font-weight: 600;
+            }
+            #status {
+              height: 42px;
+              border-top: none;
+              border-left: none;
+              border-right: none;
+              border-bottom: 1px solid rgb(78, 78, 78);
+              background-color: $searchbar-color;
+              color: $link-color;
+            }
+          }
+          .type {
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+            margin-right: 15px;
+            .typ {
+              color: rgb(170, 170, 170);
+              font-weight: 600;
+            }
+            #type {
+              height: 42px;
+              border-top: none;
+              border-left: none;
+              border-right: none;
+              border-bottom: 1px solid rgb(78, 78, 78);
+              background-color: $searchbar-color;
+              color: $link-color;
+            }
+          }
+
+          .btn {
+            width: 10%;
+            margin-right: 15px;
+            color: $link-color;
+            font-weight: 600;
+            background-color: rgb(54, 54, 54);
+            border: none;
+            height: 70px;
+
+            .fa-plus-circle {
+              font-size: 15px;
+              color: $secondary-color;
+            }
+          }
+          input[type="submit"] {
+            width: 10%;
+            background-color: $secondary-color;
+            border: none;
+            border-radius: 5px;
+            color: $link-color;
+            padding: 20px 20px;
+          }
+        }
+      }
+    }
+    .container-wrapper {
+      .welcome-box {
+        margin-top: 100px;
+        h1 {
+          text-align: center;
+          font-weight: 500;
+          font-size: 30px;
+          color: rgb(56, 56, 56);
+        }
+        p {
+          margin-top: 15px;
+          text-align: center;
+          font-size: 15px;
+          color: rgb(141, 141, 141);
+        }
+      }
+      .card-wrapper {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        
+
+        .card {
+          width: 45%;
+          height: 275px;
+          background-color: $link-color;
+          box-shadow: 0px 8px 11px 3px #e7e7e7;
+          padding: 45px 32px;
+          transition: box-shadow 0.3s;
+          border-radius: 5px;
+          &:not(:first-child) {
+            margin-left: 30px;
+          }
+          &:hover {
+            box-shadow: 0px 8px 20px 7px #c7c7c7;
+          }
+
+          .home-image {
+            width: 40%;
+            margin: auto;
+            img {
+              vertical-align: middle;
+              max-width: 100%;
+              height: auto;
+            }
+          }
+          .text-box {
+            align-items: center;
+            h3 {
+              text-align: center;
+              line-height: 1.6;
+              font-size: 20px;
+              margin-top: 20px;
+              font-weight: 500;
+              color: rgb(66, 66, 66);
+            }
+            p {
+              text-align: center;
+              margin-top: 15px;
+              margin-bottom: 0;
+              font-size: 13px;
+              color: rgb(105, 105, 105);
+            }
+          }
+        }
+      }
+      .featured-prop {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+        .header-wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .homeId {
+            h1 {
+              font-size: 30px;
+              font-weight: 500;
+              color: rgb(66, 66, 66);
+            }
+            p {
+              font-size: 15px;
+              margin-top: 15px;
+              color: rgb(105, 105, 105);
+            }
+          }
+          .view-button {
+            min-width: 200px;
+            a {
+              width: 100%;
+              color: $link-color;
+              background-color: $secondary-color;
+              padding: 15px 30px;
+              border-radius: 5px;
+            }
+          }
+        }
+        .second-slider-wrapper {
+          margin-top: 50px;
+          .card {
+            width: 100%;
+            position: relative;
+            background-color: $link-color;
+            .featured {
+              position: absolute;
+              top: 10px;
+              padding: 1px 20px;
+              border-radius: 3px;
+              background-color: orangered;
+              width: 100px;
+              margin-left: 10px;
+              span {
+                color: white;
+                font-size: small;
+              }
+            }
+            .for-rent {
+  
+              position: absolute;
+              top: 10px;
+              left: 120px;
+              padding: 1px 20px;
+              border-radius: 3px;
+              background-color: rgb(95, 185, 185);
+              margin-left: 5px;
+              width: 100px;
+              span {
+                text-align: center;
+                color: white;
+                font-size: small;
+              }
+            }
+            .card-img-top {
+              border-top-left-radius: 5px;
+              border-top-right-radius: 5px;
+            }
+            .card-body {
+              padding: 20px 15px;
+              border-top: 1px solid rgb(221, 221, 221);
+              border-bottom: 1px solid rgb(221, 221, 221);
+              border-right: 1px solid rgb(221, 221, 221);
+              border-left: 1px solid rgb(221, 221, 221);
+              .card-title {
+                
+                font-weight: 500;
+                color: rgb(65, 65, 65);
+              }
+              .card-text {
+                margin-top: 10px;
+                font-size: 12px;
+                font-weight: 600;
+                color: rgb(155, 155, 155);
+              }
+              .icon-div {
+                margin-top: 10px;
+                width: 100%;
+                .fa-couch,.fa-shower,.fa-ruler-vertical{
+                  color: $secondary-color;
+                }
+                P{
+                  color: rgb(155, 155, 155);
+                }
+              }
+            }
+            .card-footer {
+              display: flex;
+              justify-content: space-between;
+              padding: 15px;
+              border-top: none;
+              border-bottom: 1px solid rgb(221, 221, 221);
+              border-right: 1px solid rgb(221, 221, 221);
+              border-left: 1px solid rgb(221, 221, 221);
+              .icon-box{
+                display: flex;
+               
+               
+                
+                .star{
+                  
+                  .fa-star{
+                    margin-right:10px ;
+                    font-size: 20px;
+                    color: grey;
+                   
+                  }
+                }
+                .plus{
+                  .fa-plus{
+                    margin-right:10px ;
+                    font-size: 20px;
+                    color: grey;
+                    
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include for-ipad-only() {
+  #intro {
+    .advanced-searchbar-wrapper {
+      .advanced-searchbar {
+        display: none;
+      }
+    }
+    .container-wrapper {
+      .card-wrapper {
+        width: 80% !important;
+        margin: 0 auto !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .card {
+          width: 100% !important;
+          margin-top: 30px;
+          &:not(:first-child) {
+            margin-left: 0 !important;
+          }
+          .home-image {
+            width: 30% !important;
+          }
+          .text-box {
+            text-align: center !important;
+            P {
+              text-align: center !important;
+            }
+          }
+        }
+      }
+      .featured-prop {
+        width: 90% !important;
+        .header-wrapper {
+          display: block !important;
+          .view-button {
+            margin-top: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+@include for-phone-only() {
+  #intro {
+    .advanced-searchbar-wrapper {
+      .advanced-searchbar {
+        display: none;
+      }
+    }
+  }
+}
+

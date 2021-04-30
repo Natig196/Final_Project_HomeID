@@ -1,0 +1,184 @@
+@import "../common/variables";
+@import "../common/mixins";
+@import "../common/commons";
+
+main {
+  #first-slider {
+    .search-bar-wrapper {
+      display: none !important;
+      display: flex;
+      justify-content: center;
+      background-color: $searchbar-color;
+      height: 70px;
+
+      .search-bar {
+        display: flex;
+        align-items: center;
+
+        .options {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 52px;
+          background-color: rgb(243, 243, 243);
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          border-right: 1px solid rgb(230, 230, 230);
+          .fa-cog {
+            color: rgb(85, 85, 85);
+          }
+        }
+        form {
+          input[type="search"] {
+            border-width: 1px;
+            padding: 0 15px;
+            height: 52px;
+            border: none;
+
+            &::placeholder {
+              color: rgb(161, 161, 161);
+              font-weight: 600;
+            }
+          }
+        }
+        .search-div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 52px;
+          background-color: rgb(243, 243, 243);
+          border-left: 1px solid rgb(230, 230, 230);
+          .fa-search {
+            color: rgb(85, 85, 85);
+          }
+        }
+      }
+    }
+
+    .first {
+      &:hover .owl-nav{
+        display: block;
+      }
+      .img1 {
+        background-image: url(../../images/house1.jpg);
+        min-height: 91vh;
+        background-position: center center;
+        background-size: cover;
+      }
+      .img2 {
+        background-image: url(../../images/house2.jpg);
+        min-height: 91vh;
+        background-position: center center;
+        background-size: cover;
+      }
+      .img3 {
+        background-image: url(../../images/house3.jpg);
+        min-height: 91vh;
+        background-position: center center;
+        background-size: cover;
+      }
+      .owl-nav {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        width: 100%;
+        display: none;
+        
+        .owl-prev {
+          position: absolute;
+          left: 15px;
+          display: block;
+          background-color: white;
+          width: 50px;
+          height: 50px;
+          color: rgb(82, 81, 81);
+          font-size: 50px;
+          border-radius: 50%;
+          transition: background-color 0.2s;
+          &:hover {
+            background-color: $secondary-color;
+            color: white;
+          }
+          span {
+            position: relative;
+            bottom: 13px;
+            
+          }
+        }
+        .owl-next {
+          position: absolute;
+          right: 15px;
+          display: block;
+          background-color: white;
+          width: 50px;
+          height: 50px;
+          color: rgb(82, 81, 81);
+          border-radius: 50%;
+          font-size: 50px;
+          transition: background-color 0.2s;
+          &:hover {
+            background-color: $secondary-color;
+            color: white;
+          }
+          span {
+          
+            position: relative;
+            bottom: 13px;
+          }
+        }
+        
+      }
+      .owl-dots {
+        position: absolute;
+        width: 100%;
+        bottom: 10px;
+        .owl-dot:not(:first-child) {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+@include for-ipad-only() {
+  main {
+    #first-slider {
+      .search-bar-wrapper {
+        display: flex !important;
+        .search-bar {
+          form {
+            input[type="search"] {
+              min-width: 500px;
+            }
+          }
+        }
+      }
+      .owl-nav{
+        visibility: hidden;
+      }
+    }
+  }
+}
+@include for-phone-only() {
+  main {
+    #first-slider {
+      .search-bar-wrapper {
+        display: flex !important;
+        .search-bar {
+          form {
+            input[type="search"] {
+              min-width: 270px;
+            }
+          }
+        }
+      }
+      .owl-nav{
+        visibility: hidden;
+      }
+    }
+  }
+}
+

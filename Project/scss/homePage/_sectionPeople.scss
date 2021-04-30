@@ -1,0 +1,61 @@
+@import "../common/variables";
+@import "../common/mixins";
+@import "../common/commons";
+
+main {
+  #people {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(227, 236, 202, 1) 0%,
+      rgba(255, 236, 217, 1) 100%
+    );
+
+
+    .people-wrapper{
+        width: 90%;
+        margin: 0 auto;
+        .question-box{
+            padding-top: 50px;
+            text-align: center;
+            width: auto;
+            h1{
+                font-weight: 500;
+                font-size: 30px;
+                color: rgb(48, 48, 48);
+            }
+            p{
+                font-size: small;
+                margin-top: 10px;
+                font-weight: 500;
+                color: $link-border-color;
+            }
+        }
+        .carousel-wrapper{
+            .card1{
+                width: 100%;
+                height: auto;
+                
+                .logo-section{
+                   
+                    img{
+                        
+                    }
+                    .name-box{
+
+                    }
+
+                }
+                .content-section{
+                    p{
+
+                    }
+                }
+            }
+        }
+
+
+    }
+  }
+}

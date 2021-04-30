@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomeID</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap-grid.min.css"
+      integrity="sha512-cKoGpmS4czjv58PNt1YTHxg0wUDlctZyp9KUxQpdbAft+XqnyKvDvcGX0QYCgCohQenOuyGSl8l1f7/+axAqyg=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <section id="header">
+        <div class="header-wrapper">
+          <div class="header-image-box">
+            <img src="../images/homieId.png" alt="homeID" />
+          </div>
+          <nav class="navigation">
+            <ul>
+              <li><a class="custom-underline" href="">Home</a></li>
+              <li class="drop">
+                <a class="custom-underline" href=""
+                  >Listing<i class="fas fa-angle-down down ml-1"></i
+                ></a>
+              </li>
+              <li><a class="custom-underline" href="#">Agency</a></li>
+              <li><a class="custom-underline" href="#">Agent</a></li>
+              <li><a class="custom-underline" href="#">Blog</a></li>
+              <li>
+                <a class="custom-underline" href="#"
+                  >Pages<i class="fas fa-angle-down down ml-1"></i
+                ></a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="registration">
+            <ul>
+              <li>
+                <a href="#"
+                  ><i class="far fa-user-circle mr-2"></i
+                  ><span>SIGN IN</span></a
+                >
+              </li>
+              <li>
+                <a class="btn" href="#"
+                  >Add listing<i class="fas fa-home ml-2"></i
+                ></a>
+              </li>
+            </ul>
+          </nav>
+          <div class="phone-ipad-menyu">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+        <div class="side-bar">
+          <div class="menyu-wrapper">
+            <form>
+              <input
+                type="serach"
+                id="Search"
+                placeholder="Type and hit enter"
+              />
+              <i class="fas fa-search"></i>
+            </form>
+            <div class="links">
+              <ul>
+                <li><a href="#">HOME</a></li>
+                <li>
+                  <a href="#">LISTING <i class="fas fa-chevron-right"></i></a>
+                </li>
+                <li><a href="#">AGENCY</a></li>
+                <li><a href="#">AGENT</a></li>
+                <li><a href="#">BLOGS</a></li>
+                <li>
+                  <a href="#">PAGES <i class="fas fa-chevron-right"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section id="first-slider">
+        <div class="search-bar-wrapper">
+          <div class="search-bar">
+            <div class="options">
+              <i class="fas fa-cog"></i>
+            </div>
+            <form>
+              <input
+                type="search"
+                id="search"
+                placeholder="Enter a keyword..."
+              />
+            </form>
+            <div class="search-div">
+              <i class="fas fa-search"></i>
+            </div>
+          </div>
+        </div>
+        <div class="owl-carousel owl-theme first">
+          <div class="img1"></div>
+          <div class="img2"></div>
+          <div class="img3"></div>
+        </div>
+      </section>
+      <section id="intro">
+        <div class="advanced-searchbar-wrapper">
+          <div class="advanced-searchbar">
+            <form>
+              <div class="keyword">
+                <label for="search" class="key">KEYWORD</label>
+                <input
+                  type="search"
+                  id="search"
+                  placeholder="Enter Keyword..."
+                />
+                <i class="fas fa-search"></i>
+              </div>
+              <div class="status">
+                <label for="status" class="stat">STATUS</label>
+                <select name="status" id="status">
+                  <option value="all" id="options">All Status</option>
+                  <option value="rent">For Rent</option>
+                  <option value="sell">For Sale</option>
+                </select>
+              </div>
+              <div class="type">
+                <label for="type" class="typ">TYPE</label>
+                <select name="type" id="type">
+                  <option value="all">All Types</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="bar">Bar</option>
+                  <option value="cafe">Cafe</option>
+                  <option value="farm">Farm</option>
+                  <option value="house">House</option>
+                  <option value="luxury">Luxury Homes</option>
+                  <option value="office">Office</option>
+                  <option value="single">Single</option>
+                  <option value="store">Store</option>
+                  <option value="villa">Villa</option>
+                </select>
+              </div>
+              <button class="btn">
+                Advanced <i class="fas fa-plus-circle ml-2"></i>
+              </button>
+              <input type="submit" value="Search" />
+            </form>
+          </div>
+        </div>
+        <div class="container-wrapper">
+          <div class="welcome-box">
+            <h1>Welcome to HomeID</h1>
+            <p>
+              Whether you're buying, selling or renting, we can help you move
+              forward
+            </p>
+          </div>
+          <div class="card-wrapper">
+            <div class="card">
+              <div class="home-image">
+                <img src="../images/image-box-01.png" alt="" />
+              </div>
+              <div class="text-box">
+                <h3>Buy a new home</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                  fugiat magni deleniti.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="home-image">
+                <img src="../images/image-box-02.png" alt="" />
+              </div>
+              <div class="text-box">
+                <h3>Sell a home</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                  fugiat magni deleniti.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="home-image">
+                <img src="../images/image-box-03.png" alt="" />
+              </div>
+              <div class="text-box">
+                <h3>Rent a home</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                  fugiat magni deleniti.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="featured-prop">
+            <div class="header-wrapper">
+              <div class="homeId">
+                <h1>HomeID Featured Properties</h1>
+                <p>Find a perfect place for you.</p>
+              </div>
+              <div class="view-button">
+                <a href="#"
+                  >View all properties
+                  <i class="fas fa-long-arrow-alt-right"></i
+                ></a>
+              </div>
+            </div>
+            <div class="second-slider-wrapper">
+              <div class="owl-carousel owl-theme second">
+                <div class="card">
+                  <div class="img-text-box">
+                    <div class="featured"><span>FEATURED</span></div>
+                    <div class="for-rent"><span>FOR RENT</span></div>
+                  </div>
+                  <img
+                    src="../images/Home11.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">House Highland Ave Los Angeles</h4>
+                    <p class="card-text">5137 Compton Ave, Los Angeles</p>
+                    <div class="icon-div">
+                      <p>
+                        <i class="fas fa-couch mr-1"></i>3 Br
+                        <i class="fas fa-shower mr-1"></i>2Ba
+                        <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><b>550$</b> / month</small>
+                    <div class="icon-box">
+                      <div class="star">
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="plus">
+                        <i class="fas fa-plus"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="img-text-box">
+                    <div class="featured"><span>FEATURED</span></div>
+                    <div class="for-rent"><span>FOR RENT</span></div>
+                  </div>
+                  <img
+                    src="../images/Home10.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">House Highland Ave Los Angeles</h4>
+                    <p class="card-text">5137 Compton Ave, Los Angeles</p>
+                    <div class="icon-div">
+                      <p>
+                        <i class="fas fa-couch mr-1"></i>3 Br
+                        <i class="fas fa-shower mr-1"></i>2Ba
+                        <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><b>550$</b> / month</small>
+                    <div class="icon-box">
+                      <div class="star">
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="plus">
+                        <i class="fas fa-plus"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="img-text-box">
+                    <div class="featured"><span>FEATURED</span></div>
+                    <div class="for-rent"><span>FOR RENT</span></div>
+                  </div>
+                  <img
+                    src="../images/Home9.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">House Highland Ave Los Angeles</h4>
+                    <p class="card-text">5137 Compton Ave, Los Angeles</p>
+                    <div class="icon-div">
+                      <p>
+                        <i class="fas fa-couch mr-1"></i>3 Br
+                        <i class="fas fa-shower mr-1"></i>2Ba
+                        <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><b>1,250,000,$</b> / month</small>
+                    <div class="icon-box">
+                      <div class="star">
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="plus">
+                        <i class="fas fa-plus"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="img-text-box">
+                    <div class="featured"><span>FEATURED</span></div>
+                    <div class="for-rent"><span>FOR RENT</span></div>
+                  </div>
+                  <img
+                    src="../images/Home8.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">House Highland Ave Los Angeles</h4>
+                    <p class="card-text">5137 Compton Ave, Los Angeles</p>
+                    <div class="icon-div">
+                      <p>
+                        <i class="fas fa-couch mr-1"></i>3 Br
+                        <i class="fas fa-shower mr-1"></i>2Ba
+                        <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><b>1,250,000,$</b> / month</small>
+                    <div class="icon-box">
+                      <div class="star">
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="plus">
+                        <i class="fas fa-plus"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="img-text-box">
+                    <div class="featured"><span>FEATURED</span></div>
+                    <div class="for-rent"><span>FOR RENT</span></div>
+                  </div>
+                  <img
+                    src="../images/Home7.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">House Highland Ave Los Angeles</h4>
+                    <p class="card-text">5137 Compton Ave, Los Angeles</p>
+                    <div class="icon-div">
+                      <p>
+                        <i class="fas fa-couch mr-1"></i>3 Br
+                        <i class="fas fa-shower mr-1"></i>2Ba
+                        <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><b>1,250,000,$</b> / month</small>
+                    <div class="icon-box">
+                      <div class="star">
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="plus">
+                        <i class="fas fa-plus"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="img-text-box">
+                    <div class="featured"><span>FEATURED</span></div>
+                    <div class="for-rent"><span>FOR RENT</span></div>
+                  </div>
+                  <img
+                    src="../images/Home6.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">House Highland Ave Los Angeles</h4>
+                    <p class="card-text">5137 Compton Ave, Los Angeles</p>
+                    <div class="icon-div">
+                      <p>
+                        <i class="fas fa-couch mr-1"></i>3 Br
+                        <i class="fas fa-shower mr-1"></i>2Ba
+                        <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><b>550$</b> / month</small>
+                    <div class="icon-box">
+                      <div class="star">
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="plus">
+                        <i class="fas fa-plus"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="img-text-box">
+                    <div class="featured"><span>FEATURED</span></div>
+                    <div class="for-rent"><span>FOR RENT</span></div>
+                  </div>
+                  <img
+                    src="../images/Home5.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">House Highland Ave Los Angeles</h4>
+                    <p class="card-text">5137 Compton Ave, Los Angeles</p>
+                    <div class="icon-div">
+                      <p>
+                        <i class="fas fa-couch mr-1"></i>3 Br
+                        <i class="fas fa-shower mr-1"></i>2Ba
+                        <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><b>1,250,000,$</b> / month</small>
+                    <div class="icon-box">
+                      <div class="star">
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="plus">
+                        <i class="fas fa-plus"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="img-text-box">
+                    <div class="featured"><span>FEATURED</span></div>
+                    <div class="for-rent"><span>FOR RENT</span></div>
+                  </div>
+                  <img
+                    src="../images/house1.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">House Highland Ave Los Angeles</h4>
+                    <p class="card-text">5137 Compton Ave, Los Angeles</p>
+                    <div class="icon-div">
+                      <p>
+                        <i class="fas fa-couch mr-1"></i>3 Br
+                        <i class="fas fa-shower mr-1"></i>2Ba
+                        <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><b>550$</b> / month</small>
+                    <div class="icon-box">
+                      <div class="star">
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="plus">
+                        <i class="fas fa-plus"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="img-text-box">
+                    <div class="featured"><span>FEATURED</span></div>
+                    <div class="for-rent"><span>FOR RENT</span></div>
+                  </div>
+                  <img
+                    src="../images/house2.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">House Highland Ave Los Angeles</h4>
+                    <p class="card-text">5137 Compton Ave, Los Angeles</p>
+                    <div class="icon-div">
+                      <p>
+                        <i class="fas fa-couch mr-1"></i>3 Br
+                        <i class="fas fa-shower mr-1"></i>2Ba
+                        <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><b>1,250,000,$</b> / month</small>
+                    <div class="icon-box">
+                      <div class="star">
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="plus">
+                        <i class="fas fa-plus"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="img-text-box">
+                    <div class="featured"><span>FEATURED</span></div>
+                    <div class="for-rent"><span>FOR RENT</span></div>
+                  </div>
+                  <img
+                    src="../images/house1.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">House Highland Ave Los Angeles</h4>
+                    <p class="card-text">5137 Compton Ave, Los Angeles</p>
+                    <div class="icon-div">
+                      <p>
+                        <i class="fas fa-couch mr-1"></i>3 Br
+                        <i class="fas fa-shower mr-1"></i>2Ba
+                        <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><b>1,250,000,$</b> / month</small>
+                    <div class="icon-box">
+                      <div class="star">
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="plus">
+                        <i class="fas fa-plus"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="lifestyles">
+        <div class="lifestyle-wrapper">
+          <div class="explore-wrapper">
+            <h1>Explore New Lifestyles</h1>
+            <p>Find your next home, in any style you prefer.</p>
+          </div>
+          <div class="home-style-wrapper">
+            <div class="home-card">
+              <div class="image-box">
+                <img src="../images/hoverHouse1.png" alt="" />
+              </div>
+              <div class="content-box">
+                <h3>Luxury Homes</h3>
+                <p>3 Properties</p>
+              </div>
+            </div>
+            <div class="home-card1">
+              <div class="image-box">
+                <img src="../images/image-house-2.png" alt="" />
+              </div>
+              <div class="content-box">
+                <h3>Apartment</h3>
+                <p>4 Properties</p>
+              </div>
+            </div>
+            <div class="home-card2">
+              <div class="image-box">
+                <img src="../images/image-hpuse-3.png" alt="" />
+              </div>
+              <div class="content-box">
+                <h3>Apartment</h3>
+                <p>4 Properties</p>
+              </div>
+            </div>
+            <div class="home-card3">
+              <div class="image-box">
+                <img src="../images/image-house4.png" alt="" />
+              </div>
+              <div class="content-box">
+                <h3>Apartment</h3>
+                <p>4 Properties</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="third-slider">
+        <div class="container-wrapper">
+          <div class="lastest-prop">
+            <div class="header-wrapper">
+              <div class="homeId">
+                <h1>Lastest Properties For Sale</h1>
+                <p>Find a perfect place for you.</p>
+              </div>
+              <div class="view-button">
+                <a href="#"
+                  >View all properties
+                  <i class="fas fa-long-arrow-alt-right"></i
+                ></a>
+              </div>
+            </div>
+            <div class="second-slider-wrapper">
+              <div class="owl-carousel owl-theme second">
+                <div class="card">
+                  <div class="img-text-box">
+                    <div class="featured"><span>FEATURED</span></div>
+                    <div class="for-rent"><span>FOR RENT</span></div>
+                  </div>
+                  <img
+                    src="../images/Home11.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">House Highland Ave Los Angeles</h4>
+                    <p class="card-text">5137 Compton Ave, Los Angeles</p>
+                    <div class="icon-div">
+                      <p>
+                        <i class="fas fa-couch mr-1"></i>3 Br
+                        <i class="fas fa-shower mr-1"></i>2Ba
+                        <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><b>550$</b> / month</small>
+                    <div class="icon-box">
+                      <div class="star">
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="plus">
+                        <i class="fas fa-plus"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="img-text-box">
+                    <div class="featured"><span>FEATURED</span></div>
+                    <div class="for-rent"><span>FOR RENT</span></div>
+                  </div>
+                  <img
+                    src="../images/Home10.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">House Highland Ave Los Angeles</h4>
+                    <p class="card-text">5137 Compton Ave, Los Angeles</p>
+                    <div class="icon-div">
+                      <p>
+                        <i class="fas fa-couch mr-1"></i>3 Br
+                        <i class="fas fa-shower mr-1"></i>2Ba
+                        <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><b>550$</b> / month</small>
+                    <div class="icon-box">
+                      <div class="star">
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="plus">
+                        <i class="fas fa-plus"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="img-text-box">
+                    <div class="featured"><span>FEATURED</span></div>
+                    <div class="for-rent"><span>FOR RENT</span></div>
+                  </div>
+                  <img
+                    src="../images/Home9.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">House Highland Ave Los Angeles</h4>
+                    <p class="card-text">5137 Compton Ave, Los Angeles</p>
+                    <div class="icon-div">
+                      <p>
+                        <i class="fas fa-couch mr-1"></i>3 Br
+                        <i class="fas fa-shower mr-1"></i>2Ba
+                        <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><b>1,250,000,$</b> / month</small>
+                    <div class="icon-box">
+                      <div class="star">
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="plus">
+                        <i class="fas fa-plus"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="img-text-box">
+                    <div class="featured"><span>FEATURED</span></div>
+                    <div class="for-rent"><span>FOR RENT</span></div>
+                  </div>
+                  <img
+                    src="../images/Home8.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">House Highland Ave Los Angeles</h4>
+                    <p class="card-text">5137 Compton Ave, Los Angeles</p>
+                    <div class="icon-div">
+                      <p>
+                        <i class="fas fa-couch mr-1"></i>3 Br
+                        <i class="fas fa-shower mr-1"></i>2Ba
+                        <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><b>1,250,000,$</b> / month</small>
+                    <div class="icon-box">
+                      <div class="star">
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="plus">
+                        <i class="fas fa-plus"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="img-text-box">
+                    <div class="featured"><span>FEATURED</span></div>
+                    <div class="for-rent"><span>FOR RENT</span></div>
+                  </div>
+                  <img
+                    src="../images/Home7.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">House Highland Ave Los Angeles</h4>
+                    <p class="card-text">5137 Compton Ave, Los Angeles</p>
+                    <div class="icon-div">
+                      <p>
+                        <i class="fas fa-couch mr-1"></i>3 Br
+                        <i class="fas fa-shower mr-1"></i>2Ba
+                        <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><b>1,250,000,$</b> / month</small>
+                    <div class="icon-box">
+                      <div class="star">
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="plus">
+                        <i class="fas fa-plus"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="img-text-box">
+                    <div class="featured"><span>FEATURED</span></div>
+                    <div class="for-rent"><span>FOR RENT</span></div>
+                  </div>
+                  <img
+                    src="../images/Home6.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">House Highland Ave Los Angeles</h4>
+                    <p class="card-text">5137 Compton Ave, Los Angeles</p>
+                    <div class="icon-div">
+                      <p>
+                        <i class="fas fa-couch mr-1"></i>3 Br
+                        <i class="fas fa-shower mr-1"></i>2Ba
+                        <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><b>550$</b> / month</small>
+                    <div class="icon-box">
+                      <div class="star">
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="plus">
+                        <i class="fas fa-plus"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="img-text-box">
+                    <div class="featured"><span>FEATURED</span></div>
+                    <div class="for-rent"><span>FOR RENT</span></div>
+                  </div>
+                  <img
+                    src="../images/Home5.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">House Highland Ave Los Angeles</h4>
+                    <p class="card-text">5137 Compton Ave, Los Angeles</p>
+                    <div class="icon-div">
+                      <p>
+                        <i class="fas fa-couch mr-1"></i>3 Br
+                        <i class="fas fa-shower mr-1"></i>2Ba
+                        <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><b>1,250,000,$</b> / month</small>
+                    <div class="icon-box">
+                      <div class="star">
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="plus">
+                        <i class="fas fa-plus"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="img-text-box">
+                    <div class="featured"><span>FEATURED</span></div>
+                    <div class="for-rent"><span>FOR RENT</span></div>
+                  </div>
+                  <img
+                    src="../images/house1.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">House Highland Ave Los Angeles</h4>
+                    <p class="card-text">5137 Compton Ave, Los Angeles</p>
+                    <div class="icon-div">
+                      <p>
+                        <i class="fas fa-couch mr-1"></i>3 Br
+                        <i class="fas fa-shower mr-1"></i>2Ba
+                        <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><b>550$</b> / month</small>
+                    <div class="icon-box">
+                      <div class="star">
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="plus">
+                        <i class="fas fa-plus"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="img-text-box">
+                    <div class="featured"><span>FEATURED</span></div>
+                    <div class="for-rent"><span>FOR RENT</span></div>
+                  </div>
+                  <img
+                    src="../images/house2.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">House Highland Ave Los Angeles</h4>
+                    <p class="card-text">5137 Compton Ave, Los Angeles</p>
+                    <div class="icon-div">
+                      <p>
+                        <i class="fas fa-couch mr-1"></i>3 Br
+                        <i class="fas fa-shower mr-1"></i>2Ba
+                        <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><b>1,250,000,$</b> / month</small>
+                    <div class="icon-box">
+                      <div class="star">
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="plus">
+                        <i class="fas fa-plus"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="img-text-box">
+                    <div class="featured"><span>FEATURED</span></div>
+                    <div class="for-rent"><span>FOR RENT</span></div>
+                  </div>
+                  <img
+                    src="../images/house1.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h4 class="card-title">House Highland Ave Los Angeles</h4>
+                    <p class="card-text">5137 Compton Ave, Los Angeles</p>
+                    <div class="icon-div">
+                      <p>
+                        <i class="fas fa-couch mr-1"></i>3 Br
+                        <i class="fas fa-shower mr-1"></i>2Ba
+                        <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><b>1,250,000,$</b> / month</small>
+                    <div class="icon-box">
+                      <div class="star">
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="plus">
+                        <i class="fas fa-plus"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="neighbor">
+        <div class="neighbor-wrapper">
+          <div class="header-wrapper">
+            <div class="homeId">
+              <h1>Recommended Neighborhoods</h1>
+              <p>Based on your previous search.</p>
+            </div>
+            <div class="view-button">
+              <a href="#"
+                >View more properties <i class="fas fa-long-arrow-alt-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="image-wrapper">
+            <div class="div1">
+              <div class="text-box">
+                <h3>San Francisco</h3>
+                <p>4 Properties</p>
+              </div>
+              <img src="../images/beach.jpg" alt="" />
+            </div>
+            <div class="div2">
+              <div class="text-box">
+                <h3>Los Angeles</h3>
+                <p>9 Properties</p>
+              </div>
+              <img src="../images/nightcity.jpg" alt="" />
+            </div>
+            <div class="div3">
+              <div class="text-box">
+                <h3>San Diego</h3>
+                <p>5 Properties</p>
+              </div>
+              <img src="../images/newyork2.jpg" alt="" />
+            </div>
+            <div class="div4">
+              <div class="text-box">
+                <h3>New York</h3>
+                <p>6 Properties</p>
+              </div>
+              <img src="../images/newyork.jpg" alt="" />
+            </div>
+            <div class="div5">
+              <div class="text-box">
+                <h3>Kingston</h3>
+                <p>6 Properties</p>
+              </div>
+              <img src="../images/kingston.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="people">
+        <div class="people-wrapper">
+          <div class="question-box">
+            <h1>Why Do People Love Working With HomeID</h1>
+            <p>
+              Whether you’re buying, selling or renting, we can help you move
+              forward.
+            </p>
+          </div>
+          <div class="carousel-wrapper">
+            <div class="owl-carousel owl-theme fourth">
+              <div class="card1">
+                <div class="logo-section">
+                  <img src="../images/testimonial-03-60x60.jpg" alt="" />
+                  <div class="name-box">
+                    <h4>Olive Ericson</h4>
+                    <p>New Mexico</p>
+                  </div>
+                </div>
+                <div class="content-section">
+                  <p>
+                    Working with @homeID is like having a family member who can
+                    fix everything. They know what you need, exactly when you
+                    need it.
+                  </p>
+                </div>
+              </div>
+              <div class="card2">2</div>
+              <div class="card3">3</div>
+              <div class="card4">4</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
