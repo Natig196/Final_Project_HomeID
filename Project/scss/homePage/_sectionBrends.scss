@@ -1,0 +1,36 @@
+@import "../common/variables";
+@import "../common/mixins";
+@import "../common/commons";
+
+main{
+    #brends{
+        border-top: 1px solid rgb(224, 224, 224);
+        margin-top: 100px;
+        .brends-wrapper{
+          
+            width: 80%;
+            margin: 0 auto;
+        }
+        .brends-carousel-wrapper{
+            padding: 50px 0;
+            .brend{
+                // width: 100%;
+                img{
+                    max-height:150px;
+                    max-width: 150px;
+                }
+            }
+        }
+    }
+}
+
+@include for-ipad-only(){
+    main{
+        #brends{
+            .brends-wrapper{
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+    }
+}

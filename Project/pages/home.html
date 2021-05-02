@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HomeID</title>
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
@@ -35,6 +36,37 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
+    <!-- Scroll to top button -->
+    <button id="scrollToTop">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+    <!-- Login pop-up modal -->
+    <div class="modal-container" id="modal-container">
+     <div class="modal">
+     <form class="modal-form">
+      <h1>Log In</h1>
+      <p>Don't have an account yet?<a class='sign-up' href='#'> Sign up for free</a></p>
+      <div class="input-box">
+        <input type="email" placeholder="USERNAME OR EMAIL ADRESS" id="email">
+        <span class="validation"></span>
+        <input type="password" placeholder="PASSWORD" id="password">
+        <span class="validation"></span>
+        <div class="div">
+         <div class="inner-div">
+          <input type="checkbox" id="remMe" style="margin-right: 5px;"><label for="remMe" style="font-size: small;">Remember me</label>
+         </div>
+          <a href="#" style="font-size: small;">Last password</a>
+        </div>
+        <input type="submit" value="Login" id="submit">
+      </div>
+      
+     </form>
+      <div id="times">&times</div>
+     </div>
+    </div>
+
+
+    <!-- header section start -->
     <header>
       <section id="header">
         <div class="header-wrapper">
@@ -45,30 +77,77 @@
             <ul>
               <li><a class="custom-underline" href="">Home</a></li>
               <li class="drop">
-                <a class="custom-underline" href=""
-                  >Listing<i class="fas fa-angle-down down ml-1"></i
-                ></a>
+                <a class="custom-underline" href="">Listing<i class="fas fa-angle-down down ml-1"></i></a>
+                <ul class="submenyu">
+                  <li class="d-flex justify-content-between hover-me"><a href="">Property Status</a><i class="fas fa-chevron-right"></i>
+                    <ul class="submenyu2">
+                      <li><a  href="">For Rent</a></li>
+                      <li><a href="">For Sale</a></li>
+                    </ul>
+                  </li>
+                  <li class="d-flex justify-content-between  hover-me"><a href="">Property Type</a><i class="fas fa-chevron-right"></i>
+                    <ul class="submenyu2">
+                      <li><a href="">Apartement</a></li>
+                      <li><a href="">Bar</a></li>
+                      <li><a href="">Cafe</a></li>
+                      <li><a href="">Farm</a></li>
+                      <li><a href="">House</a></li>
+                      <li><a href="">Luxury Homes</a></li>
+                      <li><a href="">Office</a></li>
+                      <li><a href="">Single Family</a></li>
+                      <li><a href="">Store</a></li>
+                      <li><a href="">Villa</a></li>
+                    </ul>
+                  </li>
+                  <li class="d-flex justify-content-between  hover-me"><a href="">Property City</a><i class="fas fa-chevron-right"></i>
+                    <ul class="submenyu2">
+                      <li><a href="">Los Angeles</a></li>
+                      <li><a href="">New York</a></li>
+                      <li><a href="">San Francisco</a></li>
+                    </ul>
+                  </li>
+                  <li class="d-flex justify-content-between  hover-me"><a href="">Province / State</a><i class="fas fa-chevron-right"></i>
+                    <ul class="submenyu2">
+                      <li><a href="">Californiya</a></li>
+                      <li><a href="">New York</a></li>
+                      <li><a href="">Texas</a></li>
+                    </ul>
+                  </li>
+                  <li class="d-flex justify-content-between  hover-me"><a href="">Property Feature</a><i class="fas fa-chevron-right"></i>
+                    <ul class="submenyu2">
+                      <li><a href="">Air Conditioning</a></li>
+                      <li><a href="">Gym</a></li>
+                      <li><a href="">Swimming Pool</a></li>
+                      <li><a href="">Wifi</a></li>
+                    </ul>
+                  </li>
+                </ul>
               </li>
               <li><a class="custom-underline" href="#">Agency</a></li>
-              <li><a class="custom-underline" href="#">Agent</a></li>
-              <li><a class="custom-underline" href="#">Blog</a></li>
-              <li>
+              <li><a class="custom-underline" href="../pages/agent.html">Agent</a></li>
+              <li><a class="custom-underline" href="../pages/blog.html">Blog</a></li>
+              <li class="drop">
                 <a class="custom-underline" href="#"
-                  >Pages<i class="fas fa-angle-down down ml-1"></i
-                ></a>
+                  >Pages<i class="fas fa-angle-down down ml-1"></i></a>
+                  <ul class="submenyu">
+                    <li><a href="">Services</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact US</a></li>
+                    <li><a href="">FAQs</a></li>
+                  </ul>
               </li>
             </ul>
           </nav>
           <nav class="registration">
             <ul>
               <li>
-                <a href="#"
+                <a href="#" id="signin"
                   ><i class="far fa-user-circle mr-2"></i
-                  ><span>SIGN IN</span></a
+                  ><span style="font-size: small;">SIGN IN</span></a
                 >
               </li>
               <li>
-                <a class="btn" href="#"
+                <a class="btn" href="#" style="font-size: small;"
                   >Add listing<i class="fas fa-home ml-2"></i
                 ></a>
               </li>
@@ -106,7 +185,7 @@
         </div>
       </section>
     </header>
-
+    <!-- Main section start -->
     <main>
       <section id="first-slider">
         <div class="search-bar-wrapper">
@@ -127,9 +206,66 @@
           </div>
         </div>
         <div class="owl-carousel owl-theme first">
-          <div class="img1"></div>
-          <div class="img2"></div>
-          <div class="img3"></div>
+          <div class="img1">
+            <div class="div">
+              <div class="header-section">
+                <h1>House In Foxhall Ave,Kingston</h1>
+                <p class="text">289 Foxhall Ave,Kingston</p>
+                <p> 
+                  <i class="fas fa-couch mr-1"></i>3 Br
+                  <i class="fas fa-shower mr-1"></i>2Ba
+                  <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                </p>
+              </div>
+              <div class="footer-section">
+                <div class="rent-box">
+                  <div class="rent"><span>FOR RENT</span></div>
+                  <div class="featured"><span>FEATURED</span></div>
+                </div>
+                <p><b>$500</b>/month</p>
+              </div>
+            </div>
+          </div>
+          <div class="img2">
+            <div class="div">
+              <div class="header-section">
+                <h1>House In Foxhall Ave,Kingston</h1>
+                <p class="text">289 Foxhall Ave,Kingston</p>
+                <p> 
+                  <i class="fas fa-couch mr-1"></i>3 Br
+                  <i class="fas fa-shower mr-1"></i>2Ba
+                  <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                </p>
+              </div>
+              <div class="footer-section">
+                <div class="rent-box">
+                  <div class="rent"><span>FOR RENT</span></div>
+                  <div class="featured"><span>FEATURED</span></div>
+                </div>
+                <p><b>$500</b>/month</p>
+              </div>
+            </div>
+          </div>
+          <div class="img3">
+            <div class="div">
+              <div class="header-section">
+                <h1>House In Foxhall Ave,Kingston</h1>
+                <p class="text">289 Foxhall Ave,Kingston</p>
+                <p> 
+                  <i class="fas fa-couch mr-1"></i>3 Br
+                  <i class="fas fa-shower mr-1"></i>2Ba
+                  <i class="fas fa-ruler-vertical mr-1"></i>900 SqFt
+                </p>
+              </div>
+              <div class="footer-section">
+                <div class="rent-box">
+                  <div class="rent"><span>FOR RENT</span></div>
+                  <div class="featured"><span>FEATURED</span></div>
+                </div>
+                <p><b>$500</b>/month</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section id="intro">
@@ -142,11 +278,12 @@
                   type="search"
                   id="search"
                   placeholder="Enter Keyword..."
+                  style="outline: none;"
                 />
                 <i class="fas fa-search"></i>
               </div>
               <div class="status">
-                <label for="status" class="stat">STATUS</label>
+                <label for="status" class="stat" >STATUS</label>
                 <select name="status" id="status">
                   <option value="all" id="options">All Status</option>
                   <option value="rent">For Rent</option>
@@ -1025,7 +1162,7 @@
       <section id="people">
         <div class="people-wrapper">
           <div class="question-box">
-            <h1>Why Do People Love Working With HomeID</h1>
+            <h1>Why Do People Love Working With HomeID?</h1>
             <p>
               Whether you’re buying, selling or renting, we can help you move
               forward.
@@ -1049,16 +1186,341 @@
                   </p>
                 </div>
               </div>
-              <div class="card2">2</div>
-              <div class="card3">3</div>
-              <div class="card4">4</div>
+              <div class="card2">
+                <div class="logo-section">
+                  <img src="../images/testimonial-04-60x60.jpg" alt="" />
+                  <div class="name-box">
+                    <h4>Lyda Wise</h4>
+                    <p>Manchester</p>
+                  </div>
+                </div>
+                <div class="content-section">
+                  <p>
+                    Working with @homeID is like having a family member who can
+                    fix everything. They know what you need, exactly when you
+                    need it.
+                  </p>
+                </div>
+              </div>
+              <div class="card3">
+                <div class="logo-section">
+                  <img src="../images/testimonial-05-60x60.jpg" alt="" />
+                  <div class="name-box">
+                    <h4>Kark Knight</h4>
+                    <p>Washington, D.C</p>
+                  </div>
+                </div>
+                <div class="content-section">
+                  <p>
+                    Working with @homeID is like having a family member who can
+                    fix everything. They know what you need, exactly when you
+                    need it.
+                  </p>
+                </div>
+              </div>
+              <div class="card4">
+                <div class="logo-section">
+                  <img src="../images/testimonial-03-60x60.jpg" alt="" />
+                  <div class="name-box">
+                    <h4>Olive Ericson</h4>
+                    <p>New Mexico</p>
+                  </div>
+                </div>
+                <div class="content-section">
+                  <p>
+                    Working with @homeID is like having a family member who can
+                    fix everything. They know what you need, exactly when you
+                    need it.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="articles">
+        <div class="articles-wrapper">
+          <div class="articles-header">
+            <h1>New & Articles</h1>
+            <p>Check Out Recent News & Articles</p>
+          </div>
+          <div class="slider-wrapper">
+            <div class="owl-carousel owl-theme fifth">
+              <div class="card" style="width: 100%">
+                <div class="div">
+                  <p>MY HOME</p>
+                </div>
+                <img
+                  src="../images/blog-01-740x568.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="div2">
+                  <p>July 24,2021</p>
+                  <h3>Modern apartment adjacent</h3>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary"
+                    >Read more <i class="fas fa-long-arrow-alt-right ml-2"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="card" style="width: 100%">
+                <div class="div">
+                  <p>MY HOME</p>
+                </div>
+                <img
+                  src="../images/blog-02-740x568.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="div2">
+                  <p>July 22,2021</p>
+                  <h3>We are Offering the Best RED</h3>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary"
+                    >Read more <i class="fas fa-long-arrow-alt-right ml-2"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="card" style="width: 100%">
+                <div class="div" style="width: auto">
+                  <p>REAL HOMES</p>
+                </div>
+                <img
+                  src="../images/blog-03-740x568.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="div2">
+                  <p>July 22,2021</p>
+                  <h3>We are Offering the Best RED</h3>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary"
+                    >Read more <i class="fas fa-long-arrow-alt-right ml-2"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="card" style="width: 100%">
+                <div class="div" style="width: auto">
+                  <p>REALITY SPACE</p>
+                </div>
+                <img
+                  src="../images/blog-04-740x568.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="div2">
+                  <p>July 22,2021</p>
+                  <h3>Architects design a Resort</h3>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary"
+                    >Read more <i class="fas fa-long-arrow-alt-right ml-2"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="card" style="width: 100%">
+                <div class="div" style="width: auto">
+                  <p>HOME LAND</p>
+                </div>
+                <img
+                  src="../images/blog-06-740x568.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="div2">
+                  <p>July 22,2021</p>
+                  <h3>Project Luxury Villa in Rego Park</h3>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary"
+                    >Read more <i class="fas fa-long-arrow-alt-right ml-2"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="card" style="width: 100%">
+                <div class="div">
+                  <p>MY HOME</p>
+                </div>
+                <img
+                  src="../images/blog-08-740x568.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="div2">
+                  <p>July 22,2021</p>
+                  <h3>Project Luxury Villa in Rego Park</h3>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary"
+                    >Read more <i class="fas fa-long-arrow-alt-right ml-2"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="card" style="width: 100%">
+                <div class="div">
+                  <p>MY HOME</p>
+                </div>
+                <img
+                  src="../images/blog-10-740x568.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="div2">
+                  <p>July 22,2021</p>
+                  <h3>Project Luxury Villa in Rego Park</h3>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary"
+                    >Read more <i class="fas fa-long-arrow-alt-right ml-2"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="card" style="width: 100%">
+                <div class="div">
+                  <p>MY HOME</p>
+                </div>
+                <img
+                  src="../images/blog-11-740x568.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="div2">
+                  <p>July 22,2021</p>
+                  <h3>Project Luxury Villa in Rego Park</h3>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary"
+                    >Read more <i class="fas fa-long-arrow-alt-right ml-2"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="card" style="width: 100%">
+                <div class="div">
+                  <p>MY HOME</p>
+                </div>
+                <img
+                  src="../images/blog-12-740x568.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="div2">
+                  <p>July 22,2021</p>
+                  <h3>Project Luxury Villa in Rego Park</h3>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary"
+                    >Read more <i class="fas fa-long-arrow-alt-right ml-2"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="brends">
+        <div class="brends-wrapper">
+          <div class="brends-carousel-wrapper">
+            <div class="owl-carousel owl-theme six">
+              <div class="brend">
+                <img src="../images/client-logo-01.png" alt="" />
+              </div>
+              <div class="brend">
+                <img src="../images/client-logo-02.png" alt="" />
+              </div>
+              <div class="brend">
+                <img src="../images/client-logo-03.png" alt="" />
+              </div>
+              <div class="brend">
+                <img src="../images/client-logo-04.png" alt="" />
+              </div>
+              <div class="brend">
+                <img src="../images/client-logo-05.png" alt="" />
+              </div>
+              <div class="brend">
+                <img src="../images/ecohouse-1.png" alt="" />
+              </div>
+              <div class="brend">
+                <img src="../images/client-logo-02.png" alt="" />
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer></footer>
+
+    <!-- Footer section start -->
+    <footer>
+      <section id="allRights">
+        <div class="allRights-wrapper">
+          <div class="upper-side">
+            <img src="../images/homieId.png" alt="">
+            <div class="social-media">
+              <ul>
+                <li><a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a target="_blank" href="https://www.invisionapp.com/"><i class="fab fa-invision"></i></a></li>
+                <li><a target="_blank" href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></i></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lower-side">
+            <div class="privacy">
+              <ul>
+                <li><a href="#">TERMS OF USE</a></li>
+                <li><a href="#">PRIVACY POLICY</a></li>
+                <li><a href="#">CONTACT SUPPORT</a></li>
+                <li><a href="#">CAREERS</a></li>
+                <li><a href="#">FAQS</a></li>
+              </ul>
+            </div>
+            <div class="homeID">
+              <p>© 2021 homeID. All Rights Reserved</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"

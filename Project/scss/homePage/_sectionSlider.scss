@@ -58,7 +58,7 @@ main {
     }
 
     .first {
-      &:hover .owl-nav{
+      &:hover .owl-nav {
         display: block;
       }
       .img1 {
@@ -66,18 +66,219 @@ main {
         min-height: 91vh;
         background-position: center center;
         background-size: cover;
+        .div {
+          width: 400px;
+          height: 240px;
+          background-color: white;
+          border-radius: 5px;
+          position: fixed;
+          top: 30%;
+          right: 50px;
+          padding: 20px;
+          .header-section {
+            h1 {
+              font-weight: 500;
+              color: rgb(41, 41, 41);
+              font-size: 26px;
+              margin-bottom: 13px;
+            }
+            .text {
+              margin-bottom: 13px;
+              font-size: small;
+              font-weight: 600;
+              color: grey;
+            }
+            p {
+              margin-bottom: 13px;
+
+              .fas {
+                color: $secondary-color;
+                &:not(:first-child) {
+                  margin-left: 30px;
+                }
+              }
+            }
+          }
+          .footer-section {
+            padding-top: 20px;
+
+            border-top: 1px solid rgb(223, 223, 223);
+            display: flex;
+            justify-content: space-between;
+
+            .rent-box {
+              display: flex;
+
+              .rent {
+                background-color: rgb(75, 255, 210);
+                padding: 2px 5px;
+                border-radius: 3px;
+
+                span {
+                  color: $link-color;
+                  font-size: small;
+                }
+              }
+              .featured {
+                background-color: rgb(182, 101, 26);
+                margin-left: 10px;
+                border-radius: 3px;
+                padding: 2px 5px;
+
+                span {
+                  color: $link-color;
+                  font-size: small;
+                }
+              }
+            }
+          }
+        }
       }
       .img2 {
         background-image: url(../../images/house2.jpg);
         min-height: 91vh;
         background-position: center center;
         background-size: cover;
+        .div {
+          width: 400px;
+          height: 240px;
+          background-color: white;
+          border-radius: 5px;
+          position: fixed;
+          top: 30%;
+          right: 50px;
+          padding: 20px;
+          .header-section {
+            h1 {
+              font-weight: 500;
+              color: rgb(41, 41, 41);
+              font-size: 26px;
+              margin-bottom: 13px;
+            }
+            .text {
+              margin-bottom: 13px;
+              font-size: small;
+              font-weight: 600;
+              color: grey;
+            }
+            p {
+              margin-bottom: 13px;
+
+              .fas {
+                color: $secondary-color;
+                &:not(:first-child) {
+                  margin-left: 30px;
+                }
+              }
+            }
+          }
+          .footer-section {
+            padding-top: 20px;
+
+            border-top: 1px solid rgb(223, 223, 223);
+            display: flex;
+            justify-content: space-between;
+
+            .rent-box {
+              display: flex;
+
+              .rent {
+                background-color: rgb(75, 255, 210);
+                padding: 2px 5px;
+                border-radius: 3px;
+
+                span {
+                  color: $link-color;
+                  font-size: small;
+                }
+              }
+              .featured {
+                background-color: rgb(182, 101, 26);
+                margin-left: 10px;
+                border-radius: 3px;
+                padding: 2px 5px;
+
+                span {
+                  color: $link-color;
+                  font-size: small;
+                }
+              }
+            }
+          }
+        }
       }
       .img3 {
         background-image: url(../../images/house3.jpg);
         min-height: 91vh;
         background-position: center center;
         background-size: cover;
+        .div {
+          width: 400px;
+          height: 240px;
+          background-color: white;
+          border-radius: 5px;
+          position: fixed;
+          top: 30%;
+          right: 50px;
+          padding: 20px;
+          .header-section {
+            h1 {
+              font-weight: 500;
+              color: rgb(41, 41, 41);
+              font-size: 26px;
+              margin-bottom: 13px;
+            }
+            .text {
+              margin-bottom: 13px;
+              font-size: small;
+              font-weight: 600;
+              color: grey;
+            }
+            p {
+              margin-bottom: 13px;
+
+              .fas {
+                color: $secondary-color;
+                &:not(:first-child) {
+                  margin-left: 30px;
+                }
+              }
+            }
+          }
+          .footer-section {
+            padding-top: 20px;
+
+            border-top: 1px solid rgb(223, 223, 223);
+            display: flex;
+            justify-content: space-between;
+
+            .rent-box {
+              display: flex;
+
+              .rent {
+                background-color: rgb(75, 255, 210);
+                padding: 2px 5px;
+                border-radius: 3px;
+
+                span {
+                  color: $link-color;
+                  font-size: small;
+                }
+              }
+              .featured {
+                background-color: rgb(182, 101, 26);
+                margin-left: 10px;
+                border-radius: 3px;
+                padding: 2px 5px;
+
+                span {
+                  color: $link-color;
+                  font-size: small;
+                }
+              }
+            }
+          }
+        }
       }
       .owl-nav {
         position: absolute;
@@ -86,7 +287,7 @@ main {
         transform: translate(-50%, 50%);
         width: 100%;
         display: none;
-        
+
         .owl-prev {
           position: absolute;
           left: 15px;
@@ -105,7 +306,6 @@ main {
           span {
             position: relative;
             bottom: 13px;
-            
           }
         }
         .owl-next {
@@ -124,12 +324,10 @@ main {
             color: white;
           }
           span {
-          
             position: relative;
             bottom: 13px;
           }
         }
-        
       }
       .owl-dots {
         position: absolute;
@@ -156,7 +354,24 @@ main {
           }
         }
       }
-      .owl-nav{
+      .first{
+        .img1{
+          .div{
+            display: none !important;
+          }
+        }
+        .img2{
+          .div{
+            display: none !important;
+          }
+        }
+        .img3{
+          .div{
+            display: none !important;
+          }
+        }
+      }
+      .owl-nav {
         visibility: hidden;
       }
     }
@@ -175,10 +390,9 @@ main {
           }
         }
       }
-      .owl-nav{
+      .owl-nav {
         visibility: hidden;
       }
     }
   }
 }
-

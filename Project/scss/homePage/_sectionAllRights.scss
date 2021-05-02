@@ -1,0 +1,124 @@
+@import "../common/variables";
+@import "../common/mixins";
+@import "../common/commons";
+
+footer {
+  #allRights {
+    background-color: $primary-color;
+    .allRights-wrapper {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      width: 90%;
+      margin: 0 auto;
+      .upper-side {
+        display: flex;
+        justify-content: space-between;
+        img {
+          max-height: 30px;
+        }
+        .social-media {
+          ul {
+            display: flex;
+            li {
+              font-size: 25px;
+              &:not(:first-child) {
+                margin-left: 40px;
+              }
+              &:hover {
+                .fab {
+                  color: $link-color;
+                }
+              }
+              .fab {
+                color: grey;
+              }
+            }
+          }
+        }
+      }
+      .lower-side {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        .privacy {
+          ul {
+            display: flex;
+            li {
+              &:not(:first-child) {
+                margin-left: 50px;
+              }
+              &:hover {
+                a {
+                  color: $secondary-color;
+                }
+              }
+              a {
+                color: grey;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+        .homeID {
+          p {
+            font-size: small;
+            color: grey;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include for-ipad-only() {
+  footer {
+    #allRights {
+      .allRights-wrapper {
+        &:not(:first-child) {
+          margin-top: 20px;
+        }
+        .upper-side {
+          flex-direction: column;
+          align-items: center;
+          .social-media {
+            margin-top: 30px;
+          }
+        }
+        .lower-side {
+          flex-direction: column;
+          align-items: center;
+          ul {
+            flex-direction: row;
+            flex-wrap: wrap;
+          }
+          .homeID {
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include for-phone-only() {
+  footer {
+    #allRights {
+      .allRights-wrapper {
+        .lower-side {
+          flex-direction: column;
+          align-items: center;
+          ul {
+            flex-direction: row;
+            flex-wrap: wrap;
+            li {
+              margin: 0 auto !important;
+            }
+          }
+          .homeID {
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+  }
+}

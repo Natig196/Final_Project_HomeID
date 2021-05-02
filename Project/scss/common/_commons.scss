@@ -10,3 +10,16 @@ ul{
 a{
   text-decoration: none;
 }
+::selection{
+  background: $secondary-color;
+  color: white;
+}
+
+
+header{
+  position: fixed;
+  top: 0;
+  z-index: 3434;
+  width: 100%;
+  transition: 0.5s;
+}

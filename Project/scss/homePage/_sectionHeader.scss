@@ -23,8 +23,10 @@ header {
         ul {
           display: flex;
           li {
-            margin: 0 25px;
+            margin: 0 20px;
+
             .custom-underline {
+              font-size: small;
               color: $link-color;
               font-weight: 500;
               position: relative;
@@ -48,6 +50,62 @@ header {
               }
             }
           }
+          .drop {
+            position: relative;
+           
+            &:hover .submenyu {
+              display: block;
+              position: absolute;
+             
+            }
+            .submenyu {
+              display: none;
+              z-index: 23;
+              width: 200px;
+              background-color: white;
+              padding-top: 15px;
+              padding-bottom: 15px;
+              border-radius: 5px;
+             
+              li {
+                &:not(:first-child) {
+                  margin-top: 10px;
+                }
+
+                a {
+                  font-size: small;
+                  color: grey;
+                }
+                .fas {
+                  position: relative;
+                  right: 30px;
+                  font-size: small;
+                  color: grey;
+                }
+              }
+              .hover-me {
+                width: 100%;
+
+                &:hover .submenyu2 {
+                  display: block;
+                  position: absolute;
+
+                  margin-left: 180px;
+                }
+                .submenyu2 {
+                  display: none;
+                  background-color: $link-color;
+                  border-radius: 5px;
+                  width: 100%;
+                  padding-top: 15px;
+                  padding-bottom: 15px;
+                  li:hover a {
+                    color: $secondary-color;
+                  }
+                }
+              }
+            }
+          }
         }
       }
       .registration {
@@ -55,6 +113,7 @@ header {
           display: flex;
           a {
             color: $link-color;
+
             span {
               font-weight: 500;
             }

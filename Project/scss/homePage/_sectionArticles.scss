@@ -1,0 +1,91 @@
+@import "../common/variables";
+@import "../common/mixins";
+@import "../common/commons";
+
+main {
+  #articles {
+    .articles-wrapper {
+      width: 90%;
+      margin: 0 auto;
+      .articles-header {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        text-align: center;
+        h1 {
+          color: rgb(48, 48, 48);
+          font-weight: 500;
+          font-size: 30px;
+        }
+        p {
+          margin-top: 8px;
+          color: rgb(122, 122, 122);
+          font-size: small;
+        }
+      }
+      .slider-wrapper {
+        .card {
+          position: relative;
+          box-shadow: 0px 8px 7px 0px grey;
+          border-radius: 5px;
+          .div {
+            z-index: 99;
+            width: 80px;
+            padding: 2px 5px;
+            background-color: grey;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            border-radius: 3px;
+            &:hover {
+              background-color: $secondary-color;
+            }
+            p {
+              text-align: center;
+              font-size: small;
+              font-weight: 600;
+              color: rgb(238, 238, 238);
+            }
+          }
+          img {
+            width: 100%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            filter: brightness(80%);
+          }
+          .div2 {
+            position: absolute;
+            bottom: 160px;
+            left: 15px;
+            p {
+              color: rgb(216, 216, 216);
+              font-size: small;
+              font-weight: 500;
+            }
+            h3 {
+              font-weight: 500;
+              color: white;
+            }
+          }
+          .card-body {
+            border: 1px solid rgb(226, 226, 226);
+            padding: 20px;
+            p {
+              font-size: small;
+              color: rgb(122, 122, 122);
+              margin-bottom: 20px;
+            }
+            a {
+              color: rgb(54, 54, 54);
+              font-size: small;
+              font-weight: 600;
+            }
+            .fa-long-arrow-alt-right {
+              color: $secondary-color;
+              font-size: medium;
+            }
+          }
+        }
+      }
+    }
+  }
+}

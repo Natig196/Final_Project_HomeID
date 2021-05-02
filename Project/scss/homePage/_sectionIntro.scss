@@ -148,7 +148,6 @@ main {
         height: auto;
         display: flex;
         justify-content: space-between;
-        
 
         .card {
           width: 45%;
@@ -246,7 +245,6 @@ main {
               }
             }
             .for-rent {
-  
               position: absolute;
               top: 10px;
               left: 120px;
@@ -272,7 +270,6 @@ main {
               border-right: 1px solid rgb(221, 221, 221);
               border-left: 1px solid rgb(221, 221, 221);
               .card-title {
-                
                 font-weight: 500;
                 color: rgb(65, 65, 65);
               }
@@ -285,10 +282,12 @@ main {
               .icon-div {
                 margin-top: 10px;
                 width: 100%;
-                .fa-couch,.fa-shower,.fa-ruler-vertical{
+                .fa-couch,
+                .fa-shower,
+                .fa-ruler-vertical {
                   color: $secondary-color;
                 }
-                P{
+                P {
                   color: rgb(155, 155, 155);
                 }
               }
@@ -301,26 +300,21 @@ main {
               border-bottom: 1px solid rgb(221, 221, 221);
               border-right: 1px solid rgb(221, 221, 221);
               border-left: 1px solid rgb(221, 221, 221);
-              .icon-box{
+              .icon-box {
                 display: flex;
-               
-               
-                
-                .star{
-                  
-                  .fa-star{
-                    margin-right:10px ;
+
+                .star {
+                  .fa-star {
+                    margin-right: 10px;
                     font-size: 20px;
                     color: grey;
-                   
                   }
                 }
-                .plus{
-                  .fa-plus{
-                    margin-right:10px ;
+                .plus {
+                  .fa-plus {
+                    margin-right: 10px;
                     font-size: 20px;
                     color: grey;
-                    
                   }
                 }
               }
@@ -384,4 +378,3 @@ main {
     }
   }
 }
-
