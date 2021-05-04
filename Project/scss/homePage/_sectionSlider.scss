@@ -56,6 +56,10 @@ main {
         }
       }
     }
+    .search-bar-wrapper.active{
+      
+      margin-top: 80px;
+    }
 
     .first {
       &:hover .owl-nav {

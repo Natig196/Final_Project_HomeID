@@ -1,0 +1,392 @@
+@import "../common/variables";
+@import "../common/mixins";
+@import "../common/commons";
+
+main {
+  #contact-us {
+    .search-bar-wrapper {
+      display: none !important;
+      display: flex;
+      justify-content: center;
+      background-color: $searchbar-color;
+      height: 70px;
+     
+      .search-bar {
+        display: flex;
+        align-items: center;
+        
+        .options {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 52px;
+          background-color: rgb(243, 243, 243);
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          border-right: 1px solid rgb(230, 230, 230);
+         
+          .fa-cog {
+            color: rgb(85, 85, 85);
+          }
+        }
+        form {
+          input[type="search"] {
+            border-width: 1px;
+            padding: 0 15px;
+            height: 52px;
+            border: none;
+
+            &::placeholder {
+              color: rgb(161, 161, 161);
+              font-weight: 600;
+            }
+          }
+        }
+        .search-div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 52px;
+          background-color: rgb(243, 243, 243);
+          border-left: 1px solid rgb(230, 230, 230);
+         
+          .fa-search {
+            color: rgb(85, 85, 85);
+          }
+        }
+      }
+    }
+    .search-bar-wrapper.active {
+      margin-top: 80px;
+    }
+    .container-wrapper {
+      margin-top: 150px;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      .contact-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+          font-size: 14px;
+          a {
+            color: rgb(156, 156, 156);
+            transition: color 0.2s;
+            &:hover {
+              color: black;
+            }
+          }
+        }
+        h1 {
+          margin-top: 15px;
+          margin-bottom: 50px;
+          font-size: 30px;
+          font-weight: 600;
+        }
+      }
+      .form-wrapper {
+        display: flex;
+        border-top: 1px solid rgb(221, 221, 221);
+        padding-top: 40px;
+        .feedback {
+          border-bottom: 1px solid rgb(221, 221, 221);
+          width: 70%;
+          h4 {
+            font-size: 20px;
+            font-weight: 500;
+          }
+          p {
+            margin-top: 15px;
+            font-size: small;
+          }
+          .inner-form-box {
+            margin-top: 30px;
+            .name {
+              margin-bottom: 20px;
+
+              input[type="text"] {
+                width: 49.5%;
+                height: 50px;
+                padding: 0 10px;
+                border: 1px solid rgb(209, 209, 209);
+                border-radius: 4px;
+                outline: none;
+                &:focus {
+                  border: 1px solid $secondary-color;
+                }
+              }
+            }
+            .email-phone {
+              margin-bottom: 20px;
+              input[type="email"] {
+                width: 49.5%;
+                height: 50px;
+                padding: 0 10px;
+                border: 1px solid rgb(209, 209, 209);
+                border-radius: 4px;
+                outline: none;
+                &:focus {
+                  border: 1px solid $secondary-color;
+                }
+              }
+              input[type="tel"] {
+                width: 49.5%;
+                height: 50px;
+                padding: 0 10px;
+                border: 1px solid rgb(209, 209, 209);
+                border-radius: 4px;
+                outline: none;
+                &:focus {
+                  border: 1px solid $secondary-color;
+                }
+              }
+            }
+            .message {
+              textarea {
+                width: 99.5%;
+                padding: 0 10px;
+                border: 1px solid rgb(209, 209, 209);
+                border-radius: 4px;
+                outline: none;
+                &:focus {
+                  border: 1px solid $secondary-color;
+                }
+              }
+            }
+          }
+          .btn {
+            padding: 15px 60px;
+            background-color: $secondary-color;
+            color: $link-color;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            transition: background-color 0.2s ease;
+            &:hover {
+              background-color: #a87e4a;
+            }
+          }
+        }
+        .card-side-left {
+          width: 40%;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+
+          .search-area{
+            width: 90%;
+            padding: 20px;
+            border-radius: 4px;
+            border: 1px solid rgb(221, 221, 221);
+            background-color: white;
+            h3{
+              font-weight: 600;
+              font-size: medium;
+              color: rgb(49, 49, 49);
+            }
+            .search{
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              input[type="search"]{
+                width: 100%;
+                height: 50px;
+                padding: 0 10px;
+                border: none;
+                border-radius: 4px;
+                outline: none;
+                margin-top: 15px;
+                background-color: rgb(247, 247, 247);
+               
+                &::placeholder{
+                  color: grey;
+                  font-weight: 600;
+                }
+               
+              }
+              input[type="submit"]{
+                
+                width: 80%;
+                padding: 20px 0;
+                background-color: $secondary-color;
+                color: $link-color;
+                border: none;
+                border-radius: 5px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                transition: background-color 0.2s ease;
+                margin: 0;
+                &:hover {
+                  background-color: #a87e4a;
+                }
+              }
+            }
+          }
+          .featured-properties{
+            width: 90%;
+            padding: 20px;
+            background-color: white;
+            border-radius: 4px;
+            border: 1px solid rgb(221, 221, 221);
+            margin-top: 20px;
+            
+            h3{
+              font-weight: 600;
+              font-size: medium;
+              color: rgb(49, 49, 49);
+              margin-bottom: 20px;
+            }
+            .carousel-wrapper{
+             .house{
+              
+              .item{
+                
+                .div{
+                  padding: 10px;
+                  display: flex;
+                  z-index: 22;
+                  position: absolute;
+                  .featured{
+                    background-color: orangered;
+                    border-radius: 3px;
+                    width: fit-content;
+                    color: white;
+                    font-size: small;
+                    padding: 2px 3px;
+                  }
+                  .for-sale{
+                    background-color: rgb(117, 168, 147);
+                    border-radius: 3px;
+                    margin-left: 5px;
+                    width: fit-content;
+                    color: white;
+                    font-size: small;
+                    padding: 2px 3px;
+                  }
+                  
+                }
+                img{
+                  position: relative;
+                  filter: brightness(80%);
+                  border-radius: 5px;
+                  
+                  
+                }
+                .text-box{
+                  position: absolute;
+                  z-index: 45;
+                  bottom: 0;
+                  left: 0;
+                  padding: 10px;
+                  h3{
+                    color: white;
+                    margin: 0;
+                    font-weight: 500;
+                  }
+                  p{
+                    color: white;
+                  }
+                }
+              }
+             }
+                
+                 
+                
+              
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include for-ipad-only() {
+  main {
+    #contact-us {
+      .search-bar-wrapper {
+        display: flex !important;
+        .search-bar {
+          form {
+            input[type="search"] {
+              min-width: 500px;
+            }
+          }
+        }
+      }
+      .container-wrapper {
+        margin-top: 100px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+@include for-ipadMini-only() {
+  main {
+    #contact-us {
+      .container-wrapper {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        .form-wrapper {
+          justify-content: center;
+          .feedback {
+            width: 100%;
+            .inner-form-box {
+              .name {
+                margin-bottom: 20px;
+
+                input[type="text"] {
+                  width: 100%;
+                  &:not(:first-child) {
+                    margin-top: 15px;
+                  }
+                }
+              }
+              .email-phone {
+                input[type="email"] {
+                  width: 100%;
+                }
+                input[type="tel"] {
+                  width: 100%;
+                  margin-top: 15px;
+                }
+              }
+              .message {
+                textarea {
+                  width: 99.5%;
+                }
+              }
+            }
+          }
+          .card-side-left {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@include for-phone-only() {
+  main {
+    #contact-us {
+      .search-bar-wrapper {
+        display: flex !important;
+        .search-bar {
+          form {
+            input[type="search"] {
+              min-width: 270px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

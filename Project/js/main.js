@@ -199,13 +199,22 @@ modalForm.addEventListener('submit',function(e){
 let lastScrollTop = 0;
 
 const header = document.querySelector('header');
+const searchMenyu =document.querySelector('.search-bar-wrapper');
+
+
 window.addEventListener('scroll',function(){
   let scrollTop =window.pageYOffset || document.documentElement.scrollTop;
 
   if(scrollTop > lastScrollTop){
     header.style.top = '-80px';
+    searchMenyu.classList.remove('active');
   }else{
+    searchMenyu.classList.add('active');
     header.style.top = '0';
   }
   lastScrollTop = scrollTop;
 });
+
+
+
+

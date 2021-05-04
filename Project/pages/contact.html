@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomeID-Contact</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap-grid.min.css"
+      integrity="sha512-cKoGpmS4czjv58PNt1YTHxg0wUDlctZyp9KUxQpdbAft+XqnyKvDvcGX0QYCgCohQenOuyGSl8l1f7/+axAqyg=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="body">
+    <!-- Scroll to top button -->
+    <button id="scrollToTop">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+    <!-- Login pop-up modal -->
+    <div class="modal-container" id="modal-container">
+      <div class="modal">
+        <form class="modal-form">
+          <h1>Log In</h1>
+          <p>
+            Don't have an account yet?<a class="sign-up" href="#">
+              Sign up for free</a
+            >
+          </p>
+          <div class="input-box">
+            <input
+              type="email"
+              placeholder="USERNAME OR EMAIL ADRESS"
+              id="email"
+            />
+            <span class="validation"></span>
+            <input type="password" placeholder="PASSWORD" id="password" />
+            <span class="validation"></span>
+            <div class="div">
+              <div class="inner-div">
+                <input
+                  type="checkbox"
+                  id="remMe"
+                  style="margin-right: 5px"
+                /><label for="remMe" style="font-size: small"
+                  >Remember me</label
+                >
+              </div>
+              <a href="#" style="font-size: small">Last password</a>
+            </div>
+            <input type="submit" value="Login" id="submit" />
+          </div>
+        </form>
+        <div id="times">&times</div>
+      </div>
+    </div>
+
+    <header>
+      <section id="header">
+        <div class="header-wrapper">
+          <div class="header-image-box">
+            <img src="../images/homieId.png" alt="homeID" />
+          </div>
+          <nav class="navigation">
+            <ul>
+              <li>
+                <a class="custom-underline" href="../pages/home.html">Home</a>
+              </li>
+              <li class="drop">
+                <a class="custom-underline" href=""
+                  >Listing<i class="fas fa-angle-down down ml-1"></i
+                ></a>
+                <ul class="submenyu">
+                  <li class="d-flex justify-content-between hover-me">
+                    <a href="">Property Status</a
+                    ><i class="fas fa-chevron-right"></i>
+                    <ul class="submenyu2">
+                      <li><a href="">For Rent</a></li>
+                      <li><a href="">For Sale</a></li>
+                    </ul>
+                  </li>
+                  <li class="d-flex justify-content-between hover-me">
+                    <a href="">Property Type</a
+                    ><i class="fas fa-chevron-right"></i>
+                    <ul class="submenyu2">
+                      <li><a href="">Apartement</a></li>
+                      <li><a href="">Bar</a></li>
+                      <li><a href="">Cafe</a></li>
+                      <li><a href="">Farm</a></li>
+                      <li><a href="">House</a></li>
+                      <li><a href="">Luxury Homes</a></li>
+                      <li><a href="">Office</a></li>
+                      <li><a href="">Single Family</a></li>
+                      <li><a href="">Store</a></li>
+                      <li><a href="">Villa</a></li>
+                    </ul>
+                  </li>
+                  <li class="d-flex justify-content-between hover-me">
+                    <a href="">Property City</a
+                    ><i class="fas fa-chevron-right"></i>
+                    <ul class="submenyu2">
+                      <li><a href="">Los Angeles</a></li>
+                      <li><a href="">New York</a></li>
+                      <li><a href="">San Francisco</a></li>
+                    </ul>
+                  </li>
+                  <li class="d-flex justify-content-between hover-me">
+                    <a href="">Province / State</a
+                    ><i class="fas fa-chevron-right"></i>
+                    <ul class="submenyu2">
+                      <li><a href="">Californiya</a></li>
+                      <li><a href="">New York</a></li>
+                      <li><a href="">Texas</a></li>
+                    </ul>
+                  </li>
+                  <li class="d-flex justify-content-between hover-me">
+                    <a href="">Property Feature</a
+                    ><i class="fas fa-chevron-right"></i>
+                    <ul class="submenyu2">
+                      <li><a href="">Air Conditioning</a></li>
+                      <li><a href="">Gym</a></li>
+                      <li><a href="">Swimming Pool</a></li>
+                      <li><a href="">Wifi</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="custom-underline" href="#">Agency</a></li>
+              <li>
+                <a class="custom-underline" href="../pages/agent.html">Agent</a>
+              </li>
+              <li>
+                <a class="custom-underline" href="../pages/blog.html">Blog</a>
+              </li>
+              <li class="drop">
+                <a class="custom-underline" href="#"
+                  >Pages<i class="fas fa-angle-down down ml-1"></i
+                ></a>
+                <ul class="submenyu">
+                  <li><a href="">Services</a></li>
+                  <li><a href="">About Us</a></li>
+                  <li><a href="../pages/contact.html">Contact Us</a></li>
+                  <li><a href="">FAQs</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <nav class="registration">
+            <ul>
+              <li>
+                <a href="#" id="signin"
+                  ><i class="far fa-user-circle mr-2"></i
+                  ><span style="font-size: small">SIGN IN</span></a
+                >
+              </li>
+              <li>
+                <a class="btn" href="#" style="font-size: small"
+                  >Add listing<i class="fas fa-home ml-2"></i
+                ></a>
+              </li>
+            </ul>
+          </nav>
+          <div class="phone-ipad-menyu">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+        <div class="side-bar">
+          <div class="menyu-wrapper">
+            <form>
+              <input
+                type="serach"
+                id="Search"
+                placeholder="Type and hit enter"
+              />
+              <i class="fas fa-search"></i>
+            </form>
+            <div class="links">
+              <ul>
+                <li><a href="#">HOME</a></li>
+                <li>
+                  <a href="#">LISTING <i class="fas fa-chevron-right"></i></a>
+                </li>
+                <li><a href="#">AGENCY</a></li>
+                <li><a href="#">AGENT</a></li>
+                <li><a href="#">BLOGS</a></li>
+                <li>
+                  <a href="#">PAGES <i class="fas fa-chevron-right"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <section id="contact-us">
+        <div class="search-bar-wrapper">
+          <div class="search-bar">
+            <div class="options">
+              <i class="fas fa-cog"></i>
+            </div>
+            <form>
+              <input
+                type="search"
+                id="search"
+                placeholder="Enter a keyword..."
+              />
+            </form>
+            <div class="search-div">
+              <i class="fas fa-search"></i>
+            </div>
+          </div>
+        </div>
+        <div class="container-wrapper">
+          <div class="contact-box">
+            <p><a href="../pages/home.html">HOME</a> / CONTACT US</p>
+            <h1>Contact Us</h1>
+          </div>
+          <div class="form-wrapper">
+            <form class="feedback">
+              <h4>
+                For more information about our services, get in touch with our
+                expert consultants. We're always eager to hear from you!
+              </h4>
+              <p>
+                Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse
+                suscorem ipsum dolor sit ametcipsu
+              </p>
+              <div class="inner-form-box">
+                <div class="name">
+                  <input type="text" placeholder="First Name" />
+                  <input type="text" placeholder="Last Name" />
+                </div>
+                <div class="email-phone">
+                  <input type="email" placeholder="Your Email" />
+                  <input type="tel" placeholder="Your Phone" />
+                </div>
+                <div class="message">
+                  <textarea
+                    rows="6"
+                    cols="50"
+                    name="comment"
+                    form="usrform"
+                    placeholder="Messenger"
+                  ></textarea>
+                </div>
+              </div>
+              <input type="submit" value="Submit" class="btn" />
+            </form>
+            <div class="card-side-left">
+              <div class="search-area">
+                <h3>Search All Area Listings</h3>
+                <form class="search">
+                  <input type="search" placeholder="Enter Keyword..." /><br />
+                  <input type="submit" value="Search" />
+                </form>
+              </div>
+              <div class="featured-properties">
+                <h3>Featured Properties</h3>
+                <div class="carousel-wrapper">
+                  <div class="owl-carousel owl-theme house">
+                    <div class="item">
+                      <div class="div">
+                        <div class="featured">FEATURED</div>
+                        <div class="for-sale">FOR RENT</div>
+                      </div>
+                      <img src="../images/Home6.jpg" alt="" />
+                      <div class="text-box">
+                        <h3>Luxury Villa in Alice</h3>
+                        <p><b>$550</b> / month</p>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="div">
+                        <div class="featured">FEATURED</div>
+                        <div class="for-sale">FOR RENT</div>
+                      </div>
+                      <img src="../images/Home7.jpg" alt="" />
+                      <div class="text-box">
+                        <h3>Luxury Villa in Alice</h3>
+                        <p><b>$550</b> / month</p>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="div">
+                        <div class="featured">FEATURED</div>
+                        <div class="for-sale">FOR RENT</div>
+                      </div>
+                      <img src="../images/Home9.jpg" alt="" />
+                      <div class="text-box">
+                        <h3>Luxury Villa in Alice</h3>
+                        <p><b>$550</b> / month</p>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="div">
+                        <div class="featured">FEATURED</div>
+                        <div class="for-sale">FOR RENT</div>
+                      </div>
+                      <img src="../images/Home10.jpg" alt="" />
+                      <div class="text-box">
+                        <h3>Luxury Villa in Alice</h3>
+                        <p><b>$550</b> / month</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="location">
+        <div class="location-wrapper">
+          <div class="location-container">
+            <div class="map-side">
+              <div class="office-location">
+                <h2>Visit our office</h2>
+                <p>
+                  <i class="fas fa-map-marker-alt"></i> 2005 Stokes Isle Apt.
+                  896, Venaville, New York
+                </p>
+              </div>
+              <div class="map">
+                <div class="mapouter">
+                  <div class="gmap_canvas">
+                    <iframe
+                      width="600"
+                      height="500"
+                      id="gmap_canvas"
+                      src="https://maps.google.com/maps?q=2880%20Broadway%2C%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                      frameborder="0"
+                      scrolling="no"
+                      marginheight="0"
+                      marginwidth="0"
+                    ></iframe
+                    ><a href="http://car-history.org">VIN History Check</a
+                    ><br /><style>
+                      .mapouter {
+                        position: relative;
+                        text-align: right;
+                        height: 500px;
+                        width: 600px;
+                      }</style
+                    ><a href="http://embedmaps.info">Embed Maps Info</a
+                    ><style>
+                      .gmap_canvas {
+                        overflow: hidden;
+                        background: none !important;
+                        height: 500px;
+                        width: 600px;
+                      }
+                    </style>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-side d-flex justify-content-between">
+                <div class="contact">
+                  <h4> <i class="fas fa-phone"></i> Contact</h4>
+                  <ul>
+                    <li><p>Office <span>123 900 68666</span></p></li>
+                    <li><p>Mobile <span>123 900 68666</span></p></li>
+                    <li><p>Fax <span>1-323 900 6800</span></p></li>
+                    <li><p>Email <span>hello@homeid.com</span></p></li>
+                  </ul>
+                </div>
+                <div class="operation">
+                  <h4> <i class="far fa-clock"></i> Hour of operation</h4>
+                  <ul>
+                    <li><p>Monday – Friday: <span>09:00 – 20:00</span></p></li>
+                    <li><p>Sunday & Saturday: <span>10:30 – 22:00</span></p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="agent-side">
+              <div class="agent-box">
+                <div class="header">
+                  <p>Want to become an</p>
+                  <h3>Estate Agent?</h3>
+                </div>
+                <div class="body-image">
+                  <img src="../images/agent.png" alt="Agent" />
+                </div>
+                <div class="footer"><button>Register</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="news-letters">
+        <div class="news-wrapper">
+          <div class="news-box">
+            <h1>Subscribe to newsletter to receive exclusive offers and the latest news</h1>
+            <form >
+              <input type="search" placeholder="Your email">
+              <input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section id="allRights">
+        <div class="allRights-wrapper">
+          <div class="upper-side">
+            <img src="../images/homieId.png" alt="">
+            <div class="social-media">
+              <ul>
+                <li><a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a target="_blank" href="https://www.invisionapp.com/"><i class="fab fa-invision"></i></a></li>
+                <li><a target="_blank" href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></i></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lower-side">
+            <div class="privacy">
+              <ul>
+                <li><a href="#">TERMS OF USE</a></li>
+                <li><a href="#">PRIVACY POLICY</a></li>
+                <li><a href="../pages/contact.html">CONTACT SUPPORT</a></li>
+                <li><a href="#">CAREERS</a></li>
+                <li><a href="#">FAQS</a></li>
+              </ul>
+            </div>
+            <div class="homeID">
+              <p>© 2021 homeID. All Rights Reserved</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/contact.js"></script>
+  </body>
+</html>

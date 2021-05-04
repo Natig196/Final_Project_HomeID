@@ -44,7 +44,7 @@ header {
                 transform-origin: 100% 0%;
                 transition: transform 0.4s ease;
               }
-              &:hover::before {
+              .active,&:hover::before {
                 transform: scale(1, 1);
                 transform-origin: 0% 100%;
               }
@@ -108,6 +108,7 @@ header {
           }
         }
       }
+    
       .registration {
         ul {
           display: flex;
